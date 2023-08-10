@@ -1,11 +1,3 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "user": "roberto",
-      "title": "title of post",
-      "postContent": "conten of post",
-      "subtitle": "subtitle of post"
-    }
-  ]
+  "posts": []
 }

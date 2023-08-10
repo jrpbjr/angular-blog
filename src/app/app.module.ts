@@ -20,6 +20,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { NewPostActionsComponent } from './components/template/new-post-actions/new-post-actions.component';
 import { PostsComponent } from './views/posts/posts.component';
+import { PostsButtonComponent } from './views/posts-button/posts-button.component';
+import { EditPostFormComponent } from './views/posts/edit-post-form/edit-post-form.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { PostsComponent } from './views/posts/posts.component';
     NewPostFormComponent,
     NewPostCardComponent,
     NewPostActionsComponent,
-    PostsComponent
+    PostsComponent,
+    PostsButtonComponent,
+    EditPostFormComponent
   ],
   imports: [
     BrowserModule,
