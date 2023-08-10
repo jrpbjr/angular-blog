@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Post } from './post-form.model';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { PostServicesService } from 'src/app/services/post-services.service';
+import { NewPostActionsComponent } from '../new-post-actions/new-post-actions.component';
 
 @Component({
   selector: 'app-new-post-form',
@@ -38,13 +39,11 @@ export class NewPostFormComponent implements OnInit {
   }
 
 
-  cancel(){
-    if (this.post.postContent != ""){
-      this.dialog.open(NewPostFormComponent);
-    }else{
+  cancel() {
+    if (this.post.postContent != '') {
+      this.dialog.open(NewPostActionsComponent);
+    } else {
       this.dialogRef.close();
     }
   }
-
-
 }
