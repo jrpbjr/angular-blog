@@ -18,13 +18,15 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { NewPostCardComponent } from './components/template/new-post-card/new-post-card.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import { NewPostActionsComponent } from './components/template/new-post-actions/new-post-actions.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     NewPostFormComponent,
-    NewPostCardComponent
+    NewPostCardComponent,
+    NewPostActionsComponent
   ],
   imports: [
     BrowserModule,
