@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Post } from './post-form.model';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { PostServicesService } from 'src/app/services/post-services.service';
 
 @Component({
   selector: 'app-new-post-form',
@@ -7,9 +10,41 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewPostFormComponent implements OnInit {
 
-  constructor() { }
+  disabled = true;
+  post: Post ={
+    user: '',
+    title: '',
+    postContent: ''
+
+  }
+
+  constructor(
+    private dialog: MatDialog,
+    private dialogRef: MatDialogRef<NewPostFormComponent>,
+    private postService: PostServicesService
+  ) { }
 
   ngOnInit(): void {
   }
+
+  publish(): void {
+    this.postService.newPost(this.post).subscribe(() => {
+      this.dialog.closeAll();
+      this.postService.showMessage('New post added!', true);
+      setTimeout(() => {
+        window.location.reload();
+      }, 1000);
+    });
+  }
+
+
+  cancel(){
+    if (this.post.postContent != ""){
+      this.dialog.open(NewPostFormComponent);
+    }else{
+      this.dialogRef.close();
+    }
+  }
+
 
 }

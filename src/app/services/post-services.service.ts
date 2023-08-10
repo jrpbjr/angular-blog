@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Post } from '../components/template/new-post-form/post-form.model';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -11,8 +13,12 @@ export class PostServicesService {
 
   constructor(private http: HttpClient, private snackBar: MatSnackBar) { }
 
-  getpost(){
-    return this.http.get(this.baseUrl);
+ getPosts(): Observable<Post[]>{
+    return this.http.get<Post[]>(this.baseUrl);
+  }
+
+  newPost(post: Post) : Observable<Post> {
+    return this.http.post<Post>(this.baseUrl,post);
   }
 
   showMessage(msg: string, isError: boolean = false) : void{
