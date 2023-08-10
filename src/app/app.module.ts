@@ -19,6 +19,7 @@ import { NewPostCardComponent } from './components/template/new-post-card/new-po
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { NewPostActionsComponent } from './components/template/new-post-actions/new-post-actions.component';
+import { PostsComponent } from './views/posts/posts.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { NewPostActionsComponent } from './components/template/new-post-actions/
     HeaderComponent,
     NewPostFormComponent,
     NewPostCardComponent,
-    NewPostActionsComponent
+    NewPostActionsComponent,
+    PostsComponent
   ],
   imports: [
     BrowserModule,
