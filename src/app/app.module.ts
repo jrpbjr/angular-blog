@@ -22,6 +22,7 @@ import { NewPostActionsComponent } from './components/template/new-post-actions/
 import { PostsComponent } from './views/posts/posts.component';
 import { PostsButtonComponent } from './views/posts-button/posts-button.component';
 import { EditPostFormComponent } from './views/posts/edit-post-form/edit-post-form.component';
+import { AboutComponent } from './components/template/about/about.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { EditPostFormComponent } from './views/posts/edit-post-form/edit-post-fo
     NewPostActionsComponent,
     PostsComponent,
     PostsButtonComponent,
-    EditPostFormComponent
+    EditPostFormComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

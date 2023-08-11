@@ -1,0 +1,30 @@
+.card-header-image {
+  background-image: url(https://avatars.githubusercontent.com/u/7632859?v=4);
+  /*background-image: url(https://www.github.com/jrpbjr.png);*/
+  background-size: cover;
+}
+
+.link {
+  text-decoration: none;
+  color: #000;
+}
+
+.home .title {
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.home .subtitle {
+  font-size: 1rem;
+}
+
+.mat-card-content {
+  text-align: left;
+}
+
+@media screen and (min-width: 425px) {
+  ::ng-deep .mat-dialog-container {
+    width: 35rem;
+  }
+}
