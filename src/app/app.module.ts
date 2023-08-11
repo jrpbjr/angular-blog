@@ -23,6 +23,9 @@ import { PostsComponent } from './views/posts/posts.component';
 import { PostsButtonComponent } from './views/posts-button/posts-button.component';
 import { EditPostFormComponent } from './views/posts/edit-post-form/edit-post-form.component';
 import { AboutComponent } from './components/template/about/about.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import { SidenavInfoComponent } from './components/template/sidenav-info/sidenav-info.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,8 @@ import { AboutComponent } from './components/template/about/about.component';
     PostsComponent,
     PostsButtonComponent,
     EditPostFormComponent,
-    AboutComponent
+    AboutComponent,
+    SidenavInfoComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +54,9 @@ import { AboutComponent } from './components/template/about/about.component';
     MatDialogModule,
     MatFormFieldModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    MatSidenavModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
